@@ -1,4 +1,16 @@
+<div class="container">
+    <div class="row my-list justify-content-between d-flex align-items-center">
+    <div class="col-12 col-sm-4">
+      <div class="list-title"> <h2><%=@list.name.upcase%></h2></div>
+    </div>
+    <div class="col 12 col-sm-4">
+      <div class="btn btn-new"><%= link_to "Add a movie", new_list_path %></div>
+    </div>
+  </div>
+
+</div>
+
+
 <%= link_to "Delete",
   list_path(@list), class: 'btn btn-info',
-  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-%>
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>

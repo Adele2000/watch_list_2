@@ -6,7 +6,7 @@
 
 <div class="container">
 
-  <div class="row justify-content-between d-flex align-items-center">
+  <div class="row my-list justify-content-between d-flex align-items-center">
     <div class="col-12 col-sm-4">
       <div class="titre"><h3>MY LISTS</h3></div>
     </div>
@@ -15,10 +15,12 @@
     </div>
   </div>
 
-  <% @lists.each do |list| %>
-    <%= list.name %>
-    <%= link_to "Voir plus", list_path(list), class: 'btn btn-info' %>
-  <% end %>
+  <div class="my-lists">
+    <% @lists.each do |list| %>
+      <h4><%= list.name.upcase %></h4>
 
 
+      <%= link_to "See more", list_path(list), class: 'btn btn-more' %>
+    <% end %>
+  </div>
 </div>
