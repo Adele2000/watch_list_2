@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row mt-4">
+    <div class="col">
+        <h3> Create a new list </h3>
+         <%= simple_form_for @list do |f| %>
+          <%= f.input :name, placeholder: 'Action' %>
+          <%= f.submit class: 'btn btn-info' %>
+        <% end %>
+    </div>
+  </div>
+</div>

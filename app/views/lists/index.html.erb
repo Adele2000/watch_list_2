@@ -1,0 +1,24 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%=@movies.first.poster_url%>);">
+  <div class="container">
+    <h1><strong><%= @movies.first.title%></strong></h1>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="row justify-content-between d-flex align-items-center">
+    <div class="col-12 col-sm-4">
+      <div class="titre"><h3>MY LISTS</h3></div>
+    </div>
+    <div class="col 12 col-sm-4">
+      <div class="btn btn-new"><%= link_to "Create a movie list", new_list_path %></div>
+    </div>
+  </div>
+
+  <% @lists.each do |list| %>
+    <%= list.name %>
+    <%= link_to "Voir plus", list_path(list), class: 'btn btn-info' %>
+  <% end %>
+
+
+</div>

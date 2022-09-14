@@ -1,0 +1,4 @@
+<%= link_to "Delete",
+  list_path(@list), class: 'btn btn-info',
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
